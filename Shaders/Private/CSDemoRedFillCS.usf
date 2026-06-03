@@ -1,0 +1,21 @@
+#include "/Engine/Public/Platform.ush"
+
+Texture2D<float4> InputTexture;
+RWTexture2D<float4> OutputTexture;
+int2 InputTextureSize;
+int2 TextureSize;
+
+[numthreads(THREADGROUP_SIZE_X, THREADGROUP_SIZE_Y, 1)]
+void MainCS(uint3 DispatchThreadId : SV_DispatchThreadID)
+{
+	uint2 PixelCoord = DispatchThreadId.xy;
+
+	if (PixelCoord.x >= TextureSize.x || PixelCoord.y >= TextureSize.y)
+	{
+		return;
+	}
+
+	int2 SafeInputCoord = clamp(int2(PixelCoord), int2(0, 0), InputTextureSize - 1);
+	float4 InputColor = InputTexture.Load(int3(SafeInputCoord, 0));
+	OutputTexture[PixelCoord] = float4(1.0, InputColor.g * 0.0, InputColor.b * 0.0, 1.0);
+}

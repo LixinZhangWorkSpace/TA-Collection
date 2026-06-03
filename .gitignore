@@ -8,6 +8,8 @@ Backup/
 # Visual Studio / Rider / IDE files
 .vs/
 .idea/
+.vsconfig
+*.sln
 *.VC.db
 *.VC.opendb
 *.sln.docstates
