@@ -1,0 +1,47 @@
+# Unreal Engine generated folders
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Backup/
+
+# Visual Studio / Rider / IDE files
+.vs/
+.idea/
+*.VC.db
+*.VC.opendb
+*.sln.docstates
+
+# Build and cache artifacts
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.dll
+*.exe
+*.app
+*.ipa
+*.dSYM
+
+# Unreal generated project files
+*.suo
+*.opensdf
+*.sdf
+*.tmp
+*.log
+UpgradeLog.htm
+
+# Local editor user data
+Developers/
+Collections/
+
+# Crash and profiling outputs
+*.dmp
+*.ue4stats
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Keep source assets and config tracked by default.
